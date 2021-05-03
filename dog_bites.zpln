@@ -1,0 +1,1499 @@
+﻿{
+  "paragraphs": [
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620032513803_51674807",
+      "id": "paragraph_1620032513803_51674807",
+      "dateCreated": "2021-05-03T10:01:53+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:11392",
+      "text": "%md\nCheck we're using Spark 3.0.0",
+      "dateUpdated": "2021-05-03T10:02:13+0100",
+      "dateFinished": "2021-05-03T10:02:13+0100",
+      "dateStarted": "2021-05-03T10:02:13+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Check we&rsquo;re using Spark 3.0.0</p>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "sc.version",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T10:01:44+0100",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres46\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = 3.0.0\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1619878665573_1287184330",
+      "id": "paragraph_1619878665573_1287184330",
+      "dateCreated": "2021-05-01T15:17:45+0100",
+      "dateStarted": "2021-05-03T10:01:44+0100",
+      "dateFinished": "2021-05-03T10:01:44+0100",
+      "status": "FINISHED",
+      "$$hashKey": "object:8685"
+    },
+    {
+      "text": "val bites = spark.read.format(\"csv\").option(\"header\", \"true\").load(\"/home/del/Working/spark_zeppelin_example/dog_bites.csv\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T10:09:20+0100",
+      "progress": 100,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mbites\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [DateOfBite: string, Species: string ... 4 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=60",
+              "$$hashKey": "object:11795"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1619879831510_535331645",
+      "id": "paragraph_1619879831510_535331645",
+      "dateCreated": "2021-05-01T15:37:11+0100",
+      "dateStarted": "2021-05-03T10:09:20+0100",
+      "dateFinished": "2021-05-03T10:09:21+0100",
+      "status": "FINISHED",
+      "$$hashKey": "object:8686"
+    },
+    {
+      "text": "bites.show",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T10:09:23+0100",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------------+-------+--------------------+----+------+----------+\n|      DateOfBite|Species|               Breed| Age|Gender|SpayNeuter|\n+----------------+-------+--------------------+----+------+----------+\n|December 02 2015|    DOG|                 Pug|   7|     F|      TRUE|\n| January 27 2015|    DOG|           Jack Russ|  11|     M|     FALSE|\n| January 25 2015|    DOG|       Mastiff, Bull|null|     U|     FALSE|\n| January 20 2015|    DOG|PIT BULL/GOLDEN R...|null|     U|     FALSE|\n|December 26 2014|    DOG|   Doberman Pinscher|null|     M|     FALSE|\n| January 29 2015|    DOG|            Pit Bull|null|     U|     FALSE|\n| January 31 2015|    DOG|Chihuahua Crossbreed|   3|     M|     FALSE|\n| January 31 2015|    DOG|German Shepherd C...|null|     F|     FALSE|\n| January 23 2015|    DOG|     German Shepherd|   4|     M|     FALSE|\n|February 04 2015|    DOG|          Pomeranian|   1|     F|     FALSE|\n|February 05 2015|    DOG|           Dalmatian|  10|     M|      TRUE|\n|February 01 2015|    DOG|          Rottweiler|null|     U|     FALSE|\n|February 04 2015|    DOG|          Rottweiler|null|     U|     FALSE|\n|February 06 2015|    DOG|           Shiba Inu|   3|     M|     FALSE|\n|February 07 2015|    DOG|             Maltese|null|     U|     FALSE|\n|February 07 2015|    DOG|            Pit Bull|   5|     M|      TRUE|\n|February 06 2015|    DOG|Dachshund Smooth ...|null|     U|     FALSE|\n| January 27 2015|    DOG|    Poodle, Standard|null|     U|     FALSE|\n|February 10 2015|    DOG|Welsh Corgi, Pemb...|null|     U|     FALSE|\n|February 07 2015|    DOG|           Shiba Inu|null|     M|     FALSE|\n+----------------+-------+--------------------+----+------+----------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=61",
+              "$$hashKey": "object:11834"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1619884282486_887254885",
+      "id": "paragraph_1619884282486_887254885",
+      "dateCreated": "2021-05-01T16:51:22+0100",
+      "dateStarted": "2021-05-03T10:09:23+0100",
+      "dateFinished": "2021-05-03T10:09:23+0100",
+      "status": "FINISHED",
+      "$$hashKey": "object:8687"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620037972199_469123947",
+      "id": "paragraph_1620037972199_469123947",
+      "dateCreated": "2021-05-03T11:32:52+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:19919",
+      "text": "%md \n`Species` looks a bit useless: are all values 'DOG'? Likely data has been pre-filtered to include only dog bites!",
+      "dateUpdated": "2021-05-03T11:42:53+0100",
+      "dateFinished": "2021-05-03T11:42:53+0100",
+      "dateStarted": "2021-05-03T11:42:53+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p><code>Species</code> looks a bit useless: are all values &lsquo;DOG&rsquo;? Likely data has been pre-filtered to include only dog bites!</p>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "bites.select(\"Species\").distinct.show",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T11:36:27+0100",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=112",
+              "$$hashKey": "object:20620"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=113",
+              "$$hashKey": "object:20621"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=114",
+              "$$hashKey": "object:20622"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=115",
+              "$$hashKey": "object:20623"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=116",
+              "$$hashKey": "object:20624"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620038051687_398872964",
+      "id": "paragraph_1620038051687_398872964",
+      "dateCreated": "2021-05-03T11:34:11+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:20006",
+      "dateFinished": "2021-05-03T11:36:28+0100",
+      "dateStarted": "2021-05-03T11:36:27+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+\n|Species|\n+-------+\n|    DOG|\n+-------+\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620036599018_1166433093",
+      "id": "paragraph_1620036599018_1166433093",
+      "dateCreated": "2021-05-03T11:09:59+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:18489",
+      "text": "%md \nClean up column types, drop `Species`",
+      "dateUpdated": "2021-05-03T11:36:40+0100",
+      "dateFinished": "2021-05-03T11:36:40+0100",
+      "dateStarted": "2021-05-03T11:36:40+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Clean up column types, drop <code>Species</code></p>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620030636552_325239548",
+      "id": "paragraph_1620030636552_325239548",
+      "dateCreated": "2021-05-03T09:30:36+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:10192",
+      "text": "val bites_clean = bites.select(\n    to_date(from_unixtime(unix_timestamp(col(\"DateOfBite\"), \"MMMM dd yyyy\"))).as(\"date\"),\n    lower(col(\"Breed\")).as(\"breed\"),\n    col(\"Age\").cast(\"int\").as(\"age\"),\n    lower(col(\"Gender\")).as(\"gender\"),\n    col(\"SpayNeuter\").cast(\"boolean\").as(\"spay_neuter\")\n)",
+      "dateUpdated": "2021-05-03T11:36:50+0100",
+      "dateFinished": "2021-05-03T11:36:51+0100",
+      "dateStarted": "2021-05-03T11:36:50+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mbites_clean\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, breed: string ... 3 more fields]\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620032990037_1959765745",
+      "id": "paragraph_1620032990037_1959765745",
+      "dateCreated": "2021-05-03T10:09:50+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:11926",
+      "text": "bites_clean.schema",
+      "dateUpdated": "2021-05-03T10:09:51+0100",
+      "dateFinished": "2021-05-03T10:09:51+0100",
+      "dateStarted": "2021-05-03T10:09:51+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mres56\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.types.StructType\u001b[0m = StructType(StructField(date,DateType,true), StructField(species,StringType,true), StructField(breed,StringType,true), StructField(age,IntegerType,true), StructField(gender,StringType,true), StructField(spay_neuter,BooleanType,true))\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620038996851_659175047",
+      "id": "paragraph_1620038996851_659175047",
+      "dateCreated": "2021-05-03T11:49:56+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:21007",
+      "text": "%md\nWrite to Parquet",
+      "dateUpdated": "2021-05-03T11:50:06+0100",
+      "dateFinished": "2021-05-03T11:50:06+0100",
+      "dateStarted": "2021-05-03T11:50:06+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Write to Parquet</p>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=117",
+              "$$hashKey": "object:21002"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620038852438_773660145",
+      "id": "paragraph_1620038852438_773660145",
+      "dateCreated": "2021-05-03T11:47:32+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:20918",
+      "text": "bites_clean.write.parquet(\"/home/del/Working/spark_zeppelin_example/bites_clean.parquet\")",
+      "dateUpdated": "2021-05-03T11:49:49+0100",
+      "dateFinished": "2021-05-03T11:49:51+0100",
+      "dateStarted": "2021-05-03T11:49:49+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=118",
+              "$$hashKey": "object:21143"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620030842653_1957119238",
+      "id": "paragraph_1620030842653_1957119238",
+      "dateCreated": "2021-05-03T09:34:02+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:10337",
+      "text": "bites_clean.show",
+      "dateUpdated": "2021-05-03T11:57:31+0100",
+      "dateFinished": "2021-05-03T11:57:32+0100",
+      "dateStarted": "2021-05-03T11:57:31+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+--------------------+----+------+-----------+\n|      date|               breed| age|gender|spay_neuter|\n+----------+--------------------+----+------+-----------+\n|2015-12-02|                 pug|   7|     f|       true|\n|2015-01-27|           jack russ|  11|     m|      false|\n|2015-01-25|       mastiff, bull|null|     u|      false|\n|2015-01-20|pit bull/golden r...|null|     u|      false|\n|2014-12-26|   doberman pinscher|null|     m|      false|\n|2015-01-29|            pit bull|null|     u|      false|\n|2015-01-31|chihuahua crossbreed|   3|     m|      false|\n|2015-01-31|german shepherd c...|null|     f|      false|\n|2015-01-23|     german shepherd|   4|     m|      false|\n|2015-02-04|          pomeranian|   1|     f|      false|\n|2015-02-05|           dalmatian|  10|     m|       true|\n|2015-02-01|          rottweiler|null|     u|      false|\n|2015-02-04|          rottweiler|null|     u|      false|\n|2015-02-06|           shiba inu|   3|     m|      false|\n|2015-02-07|             maltese|null|     u|      false|\n|2015-02-07|            pit bull|   5|     m|       true|\n|2015-02-06|dachshund smooth ...|null|     u|      false|\n|2015-01-27|    poodle, standard|null|     u|      false|\n|2015-02-10|welsh corgi, pemb...|null|     u|      false|\n|2015-02-07|           shiba inu|null|     m|      false|\n+----------+--------------------+----+------+-----------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620036630420_1422110806",
+      "id": "paragraph_1620036630420_1422110806",
+      "dateCreated": "2021-05-03T11:10:30+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:18576",
+      "text": "%md \nCreate Spark SQL temporary view so we can more conveniently run queries on the dataframe",
+      "dateUpdated": "2021-05-03T11:44:27+0100",
+      "dateFinished": "2021-05-03T11:44:27+0100",
+      "dateStarted": "2021-05-03T11:44:27+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Create Spark SQL temporary view so we can more conveniently run queries on the dataframe</p>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620030385072_81138795",
+      "id": "paragraph_1620030385072_81138795",
+      "dateCreated": "2021-05-03T09:26:25+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:10042",
+      "text": "bites_clean.createOrReplaceTempView(\"bites\")",
+      "dateUpdated": "2021-05-03T10:52:42+0100",
+      "dateFinished": "2021-05-03T10:52:42+0100",
+      "dateStarted": "2021-05-03T10:52:42+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620037928864_1272682039",
+      "id": "paragraph_1620037928864_1272682039",
+      "dateCreated": "2021-05-03T11:32:08+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:19832",
+      "text": "%md\nLet's check seasonality of dog bites",
+      "dateUpdated": "2021-05-03T11:32:25+0100",
+      "dateFinished": "2021-05-03T11:32:25+0100",
+      "dateStarted": "2021-05-03T11:32:25+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Let&rsquo;s check seasonality of dog bites</p>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "date_format(CAST(date AS TIMESTAMP), MM)": "string",
+                      "month": "string",
+                      "num_bites": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "pieChart": {}
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "month",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "num_bites",
+                  "index": 2,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=95",
+              "$$hashKey": "object:18431"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620030315552_1175265059",
+      "id": "paragraph_1620030315552_1175265059",
+      "dateCreated": "2021-05-03T09:25:15+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:9937",
+      "text": "%sql SELECT date_format(date, 'MM'), date_format(date, 'MMMM') AS month, COUNT(*) AS num_bites FROM bites GROUP BY date_format(date, 'MM'), date_format(date, 'MMMM') ORDER BY 1 ASC",
+      "dateUpdated": "2021-05-03T11:06:58+0100",
+      "dateFinished": "2021-05-03T11:05:04+0100",
+      "dateStarted": "2021-05-03T11:05:02+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "date_format(CAST(date AS TIMESTAMP), MM)\tmonth\tnum_bites\n01\tJanuary\t580\n02\tFebruary\t550\n03\tMarch\t616\n04\tApril\t751\n05\tMay\t828\n06\tJune\t867\n07\tJuly\t895\n08\tAugust\t873\n09\tSeptember\t787\n10\tOctober\t665\n11\tNovember\t666\n12\tDecember\t629\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%md\nWhat about breakdown by `gender` of dog",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T11:45:42+0100",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620038723514_295177081",
+      "id": "paragraph_1620038723514_295177081",
+      "dateCreated": "2021-05-03T11:45:23+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:20822",
+      "dateFinished": "2021-05-03T11:45:42+0100",
+      "dateStarted": "2021-05-03T11:45:42+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>What about breakdown by <code>gender</code> of dog</p>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%sql SELECT gender, COUNT(*) AS count FROM bites GROUP BY gender",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T11:07:10+0100",
+      "progress": 48,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "multiBarChart",
+              "height": 464,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "gender": "string",
+                      "count": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "stacked": false
+                },
+                "pieChart": {}
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "gender",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "count",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "gender\tcount\nm\t4121\nf\t1608\nu\t2978\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=65",
+              "$$hashKey": "object:18452"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=66",
+              "$$hashKey": "object:18453"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=67",
+              "$$hashKey": "object:18454"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=68",
+              "$$hashKey": "object:18455"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=69",
+              "$$hashKey": "object:18456"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1619907948496_1341390314",
+      "id": "paragraph_1619907948496_1341390314",
+      "dateCreated": "2021-05-01T23:25:48+0100",
+      "dateStarted": "2021-05-03T10:54:50+0100",
+      "dateFinished": "2021-05-03T10:54:52+0100",
+      "status": "FINISHED",
+      "$$hashKey": "object:8690"
+    },
+    {
+      "text": "%md\nAggregate into daily time series data",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T11:11:24+0100",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Aggregate into daily time series data</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1619908610581_1320970497",
+      "id": "paragraph_1619908610581_1320970497",
+      "dateCreated": "2021-05-01T23:36:50+0100",
+      "dateStarted": "2021-05-03T11:11:24+0100",
+      "dateFinished": "2021-05-03T11:11:24+0100",
+      "status": "FINISHED",
+      "$$hashKey": "object:8691"
+    },
+    {
+      "text": "val daily_bites = spark.sql(\"SELECT date, COUNT(*) AS num_bites FROM bites GROUP BY date ORDER BY date ASC\")\ndaily_bites.createOrReplaceTempView(\"daily_bites\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T13:49:54+0100",
+      "progress": 0,
+      "config": {
+        "tableHide": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620046061108_384393937",
+      "id": "paragraph_1620046061108_384393937",
+      "dateCreated": "2021-05-03T13:47:41+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:22354",
+      "dateFinished": "2021-05-03T13:48:48+0100",
+      "dateStarted": "2021-05-03T13:48:48+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdaily_bites\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, num_bites: bigint]\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%sql SELECT * FROM daily_bites",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T13:49:27+0100",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "lineChart",
+              "height": 300,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "date": "string",
+                      "num_bites": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default",
+                  "forceY": true
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "date",
+                  "index": 0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "num_bites",
+                  "index": 1,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=134",
+              "$$hashKey": "object:22664"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1619908634399_1782956338",
+      "id": "paragraph_1619908634399_1782956338",
+      "dateCreated": "2021-05-01T23:37:14+0100",
+      "status": "FINISHED",
+      "$$hashKey": "object:8692",
+      "dateFinished": "2021-05-03T13:49:28+0100",
+      "dateStarted": "2021-05-03T13:49:27+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "date\tnum_bites\n2014-04-10\t1\n2014-10-22\t1\n2014-11-08\t2\n2014-11-21\t1\n2014-12-25\t1\n2014-12-26\t1\n2015-01-08\t1\n2015-01-11\t1\n2015-01-13\t1\n2015-01-20\t3\n2015-01-21\t1\n2015-01-22\t3\n2015-01-23\t3\n2015-01-24\t1\n2015-01-25\t4\n2015-01-26\t2\n2015-01-27\t6\n2015-01-28\t5\n2015-01-29\t2\n2015-01-30\t3\n2015-01-31\t8\n2015-02-01\t8\n2015-02-02\t11\n2015-02-03\t3\n2015-02-04\t4\n2015-02-05\t7\n2015-02-06\t8\n2015-02-07\t12\n2015-02-08\t5\n2015-02-09\t8\n2015-02-10\t4\n2015-02-11\t4\n2015-02-12\t6\n2015-02-13\t5\n2015-02-14\t6\n2015-02-15\t8\n2015-02-16\t3\n2015-02-17\t9\n2015-02-18\t3\n2015-02-19\t7\n2015-02-20\t3\n2015-02-21\t7\n2015-02-22\t9\n2015-02-23\t6\n2015-02-24\t7\n2015-02-25\t2\n2015-02-26\t6\n2015-02-27\t8\n2015-02-28\t10\n2015-03-01\t7\n2015-03-02\t3\n2015-03-03\t11\n2015-03-04\t3\n2015-03-05\t8\n2015-03-06\t7\n2015-03-07\t14\n2015-03-08\t5\n2015-03-09\t7\n2015-03-10\t2\n2015-03-11\t5\n2015-03-12\t6\n2015-03-13\t6\n2015-03-14\t11\n2015-03-15\t8\n2015-03-16\t12\n2015-03-17\t8\n2015-03-18\t8\n2015-03-19\t2\n2015-03-20\t3\n2015-03-21\t9\n2015-03-22\t10\n2015-03-23\t6\n2015-03-24\t5\n2015-03-25\t11\n2015-03-26\t10\n2015-03-27\t3\n2015-03-28\t3\n2015-03-29\t7\n2015-03-30\t3\n2015-03-31\t11\n2015-04-01\t8\n2015-04-02\t14\n2015-04-03\t5\n2015-04-04\t7\n2015-04-05\t10\n2015-04-06\t13\n2015-04-07\t6\n2015-04-08\t6\n2015-04-09\t4\n2015-04-10\t15\n2015-04-11\t7\n2015-04-12\t17\n2015-04-13\t8\n2015-04-14\t6\n2015-04-15\t7\n2015-04-16\t6\n2015-04-17\t8\n2015-04-18\t11\n2015-04-19\t14\n2015-04-20\t11\n2015-04-21\t4\n2015-04-22\t8\n2015-04-23\t8\n2015-04-24\t6\n2015-04-25\t12\n2015-04-26\t9\n2015-04-27\t11\n2015-04-28\t6\n2015-04-29\t10\n2015-04-30\t4\n2015-05-01\t12\n2015-05-02\t14\n2015-05-03\t12\n2015-05-04\t13\n2015-05-05\t16\n2015-05-06\t6\n2015-05-07\t9\n2015-05-08\t9\n2015-05-09\t11\n2015-05-10\t10\n2015-05-11\t4\n2015-05-12\t9\n2015-05-13\t5\n2015-05-14\t8\n2015-05-15\t7\n2015-05-16\t7\n2015-05-17\t8\n2015-05-18\t5\n2015-05-19\t10\n2015-05-20\t10\n2015-05-21\t6\n2015-05-22\t4\n2015-05-23\t8\n2015-05-24\t20\n2015-05-25\t13\n2015-05-26\t8\n2015-05-27\t8\n2015-05-28\t11\n2015-05-29\t12\n2015-05-30\t18\n2015-05-31\t7\n2015-06-01\t4\n2015-06-02\t10\n2015-06-03\t5\n2015-06-04\t13\n2015-06-05\t10\n2015-06-06\t22\n2015-06-07\t13\n2015-06-08\t8\n2015-06-09\t16\n2015-06-10\t11\n2015-06-11\t5\n2015-06-12\t10\n2015-06-13\t7\n2015-06-14\t14\n2015-06-15\t6\n2015-06-16\t11\n2015-06-17\t8\n2015-06-18\t7\n2015-06-19\t13\n2015-06-20\t8\n2015-06-21\t13\n2015-06-22\t12\n2015-06-23\t8\n2015-06-24\t9\n2015-06-25\t7\n2015-06-26\t7\n2015-06-27\t11\n2015-06-28\t8\n2015-06-29\t7\n2015-06-30\t7\n2015-07-01\t10\n2015-07-02\t15\n2015-07-03\t15\n2015-07-04\t16\n2015-07-05\t8\n2015-07-06\t9\n2015-07-07\t10\n2015-07-08\t10\n2015-07-09\t7\n2015-07-10\t10\n2015-07-11\t11\n2015-07-12\t11\n2015-07-13\t13\n2015-07-14\t12\n2015-07-15\t7\n2015-07-16\t6\n2015-07-17\t12\n2015-07-18\t10\n2015-07-19\t12\n2015-07-20\t6\n2015-07-21\t12\n2015-07-22\t14\n2015-07-23\t4\n2015-07-24\t6\n2015-07-25\t8\n2015-07-26\t4\n2015-07-27\t13\n2015-07-28\t11\n2015-07-29\t5\n2015-07-30\t9\n2015-07-31\t10\n2015-08-01\t4\n2015-08-02\t19\n2015-08-03\t6\n2015-08-04\t10\n2015-08-05\t11\n2015-08-06\t10\n2015-08-07\t9\n2015-08-08\t11\n2015-08-09\t8\n2015-08-10\t11\n2015-08-11\t15\n2015-08-12\t6\n2015-08-13\t6\n2015-08-14\t5\n2015-08-15\t12\n2015-08-16\t11\n2015-08-17\t10\n2015-08-18\t9\n2015-08-19\t9\n2015-08-20\t7\n2015-08-21\t7\n2015-08-22\t12\n2015-08-23\t8\n2015-08-24\t7\n2015-08-25\t9\n2015-08-26\t9\n2015-08-27\t9\n2015-08-28\t7\n2015-08-29\t10\n2015-08-30\t15\n2015-08-31\t9\n2015-09-01\t14\n2015-09-02\t4\n2015-09-03\t14\n2015-09-04\t8\n2015-09-05\t12\n2015-09-06\t7\n2015-09-07\t10\n2015-09-08\t12\n2015-09-09\t7\n2015-09-10\t9\n2015-09-11\t16\n2015-09-12\t10\n2015-09-13\t8\n2015-09-14\t8\n2015-09-15\t5\n2015-09-16\t6\n2015-09-17\t7\n2015-09-18\t10\n2015-09-19\t8\n2015-09-20\t7\n2015-09-21\t4\n2015-09-22\t5\n2015-09-23\t9\n2015-09-24\t3\n2015-09-25\t9\n2015-09-26\t8\n2015-09-27\t7\n2015-09-28\t11\n2015-09-29\t6\n2015-09-30\t10\n2015-10-01\t3\n2015-10-02\t3\n2015-10-03\t11\n2015-10-04\t5\n2015-10-05\t7\n2015-10-06\t8\n2015-10-07\t6\n2015-10-08\t11\n2015-10-09\t9\n2015-10-10\t7\n2015-10-11\t4\n2015-10-12\t9\n2015-10-13\t9\n2015-10-14\t3\n2015-10-15\t6\n2015-10-16\t4\n2015-10-17\t5\n2015-10-18\t6\n2015-10-19\t12\n2015-10-20\t9\n2015-10-21\t11\n2015-10-22\t5\n2015-10-23\t9\n2015-10-24\t9\n2015-10-25\t3\n2015-10-26\t10\n2015-10-27\t8\n2015-10-28\t5\n2015-10-29\t4\n2015-10-30\t6\n2015-10-31\t8\n2015-11-01\t9\n2015-11-02\t8\n2015-11-03\t4\n2015-11-04\t13\n2015-11-05\t13\n2015-11-06\t19\n2015-11-07\t11\n2015-11-08\t3\n2015-11-09\t1\n2015-11-10\t6\n2015-11-11\t10\n2015-11-12\t14\n2015-11-13\t12\n2015-11-14\t6\n2015-11-15\t7\n2015-11-16\t6\n2015-11-17\t5\n2015-11-18\t5\n2015-11-19\t4\n2015-11-20\t7\n2015-11-21\t7\n2015-11-22\t6\n2015-11-23\t9\n2015-11-24\t7\n2015-11-25\t8\n2015-11-26\t10\n2015-11-27\t9\n2015-11-28\t7\n2015-11-29\t7\n2015-11-30\t9\n2015-12-01\t8\n2015-12-02\t6\n2015-12-03\t6\n2015-12-04\t6\n2015-12-05\t8\n2015-12-06\t15\n2015-12-07\t8\n2015-12-08\t4\n2015-12-09\t7\n2015-12-10\t6\n2015-12-11\t7\n2015-12-12\t10\n2015-12-13\t6\n2015-12-14\t8\n2015-12-15\t10\n2015-12-16\t5\n2015-12-17\t4\n2015-12-18\t5\n2015-12-19\t9\n2015-12-20\t6\n2015-12-21\t7\n2015-12-22\t5\n2015-12-23\t5\n2015-12-24\t8\n2015-12-25\t12\n2015-12-26\t8\n2015-12-27\t5\n2015-12-28\t4\n2015-12-29\t5\n2015-12-30\t6\n2015-12-31\t14\n2016-01-01\t9\n2016-01-02\t6\n2016-01-03\t13\n2016-01-04\t9\n2016-01-05\t4\n2016-01-06\t4\n2016-01-07\t6\n2016-01-08\t7\n2016-01-09\t5\n2016-01-10\t5\n2016-01-11\t7\n2016-01-12\t4\n2016-01-13\t8\n2016-01-14\t8\n2016-01-15\t5\n2016-01-16\t10\n2016-01-17\t5\n2016-01-18\t6\n2016-01-19\t7\n2016-01-20\t3\n2016-01-21\t10\n2016-01-22\t9\n2016-01-23\t9\n2016-01-24\t9\n2016-01-25\t3\n2016-01-26\t2\n2016-01-27\t3\n2016-01-28\t3\n2016-01-29\t5\n2016-01-30\t7\n2016-01-31\t10\n2016-02-01\t6\n2016-02-02\t6\n2016-02-03\t4\n2016-02-04\t9\n2016-02-05\t3\n2016-02-06\t4\n2016-02-07\t8\n2016-02-08\t5\n2016-02-09\t6\n2016-02-10\t5\n2016-02-11\t6\n2016-02-12\t4\n2016-02-13\t8\n2016-02-14\t8\n2016-02-15\t2\n2016-02-16\t9\n2016-02-17\t5\n2016-02-18\t12\n2016-02-19\t8\n2016-02-20\t5\n2016-02-21\t9\n2016-02-22\t5\n2016-02-23\t2\n2016-02-24\t6\n2016-02-25\t9\n2016-02-26\t3\n2016-02-27\t3\n2016-02-28\t6\n2016-02-29\t6\n2016-03-01\t6\n2016-03-02\t6\n2016-03-03\t5\n2016-03-04\t6\n2016-03-05\t6\n2016-03-06\t8\n2016-03-07\t1\n2016-03-08\t4\n2016-03-09\t5\n2016-03-10\t6\n2016-03-11\t6\n2016-03-12\t9\n2016-03-13\t8\n2016-03-14\t1\n2016-03-15\t7\n2016-03-16\t5\n2016-03-17\t5\n2016-03-18\t5\n2016-03-19\t8\n2016-03-20\t4\n2016-03-21\t3\n2016-03-22\t10\n2016-03-23\t9\n2016-03-24\t7\n2016-03-25\t6\n2016-03-26\t11\n2016-03-27\t2\n2016-03-28\t5\n2016-03-29\t5\n2016-03-30\t6\n2016-03-31\t3\n2016-04-01\t5\n2016-04-02\t13\n2016-04-03\t9\n2016-04-04\t3\n2016-04-05\t10\n2016-04-06\t3\n2016-04-07\t12\n2016-04-08\t11\n2016-04-09\t7\n2016-04-10\t4\n2016-04-11\t5\n2016-04-12\t11\n2016-04-13\t5\n2016-04-14\t8\n2016-04-15\t9\n2016-04-16\t6\n2016-04-17\t12\n2016-04-18\t7\n2016-04-19\t9\n2016-04-20\t8\n2016-04-21\t5\n2016-04-22\t8\n2016-04-23\t13\n2016-04-24\t7\n2016-04-25\t13\n2016-04-26\t7\n2016-04-27\t14\n2016-04-28\t8\n2016-04-29\t7\n2016-04-30\t18\n2016-05-01\t9\n2016-05-02\t8\n2016-05-03\t7\n2016-05-04\t7\n2016-05-05\t14\n2016-05-06\t3\n2016-05-07\t8\n2016-05-08\t11\n2016-05-09\t10\n2016-05-10\t6\n2016-05-11\t8\n2016-05-12\t12\n2016-05-13\t4\n2016-05-14\t12\n2016-05-15\t6\n2016-05-16\t4\n2016-05-17\t5\n2016-05-18\t7\n2016-05-19\t4\n2016-05-20\t16\n2016-05-21\t3\n2016-05-22\t11\n2016-05-23\t11\n2016-05-24\t6\n2016-05-25\t12\n2016-05-26\t6\n2016-05-27\t8\n2016-05-28\t11\n2016-05-29\t15\n2016-05-30\t11\n2016-05-31\t6\n2016-06-01\t9\n2016-06-02\t7\n2016-06-03\t4\n2016-06-04\t9\n2016-06-05\t7\n2016-06-06\t5\n2016-06-07\t6\n2016-06-08\t5\n2016-06-09\t5\n2016-06-10\t10\n2016-06-11\t9\n2016-06-12\t11\n2016-06-13\t8\n2016-06-14\t6\n2016-06-15\t7\n2016-06-16\t6\n2016-06-17\t5\n2016-06-18\t12\n2016-06-19\t8\n2016-06-20\t12\n2016-06-21\t14\n2016-06-22\t16\n2016-06-23\t15\n2016-06-24\t6\n2016-06-25\t12\n2016-06-26\t8\n2016-06-27\t4\n2016-06-28\t4\n2016-06-29\t5\n2016-06-30\t5\n2016-07-01\t15\n2016-07-02\t12\n2016-07-03\t7\n2016-07-04\t12\n2016-07-05\t5\n2016-07-06\t7\n2016-07-07\t9\n2016-07-08\t6\n2016-07-09\t6\n2016-07-10\t9\n2016-07-11\t8\n2016-07-12\t4\n2016-07-13\t6\n2016-07-14\t8\n2016-07-15\t7\n2016-07-16\t11\n2016-07-17\t6\n2016-07-18\t3\n2016-07-19\t7\n2016-07-20\t7\n2016-07-21\t6\n2016-07-22\t12\n2016-07-23\t9\n2016-07-24\t3\n2016-07-25\t5\n2016-07-26\t2\n2016-07-27\t15\n2016-07-28\t12\n2016-07-29\t6\n2016-07-30\t13\n2016-07-31\t7\n2016-08-01\t9\n2016-08-02\t9\n2016-08-03\t9\n2016-08-04\t13\n2016-08-05\t11\n2016-08-06\t12\n2016-08-07\t13\n2016-08-08\t10\n2016-08-09\t5\n2016-08-10\t5\n2016-08-11\t5\n2016-08-12\t6\n2016-08-13\t6\n2016-08-14\t12\n2016-08-15\t8\n2016-08-16\t9\n2016-08-17\t6\n2016-08-18\t7\n2016-08-19\t10\n2016-08-20\t13\n2016-08-21\t9\n2016-08-22\t7\n2016-08-23\t10\n2016-08-24\t10\n2016-08-25\t6\n2016-08-26\t3\n2016-08-27\t13\n2016-08-28\t16\n2016-08-29\t6\n2016-08-30\t10\n2016-08-31\t3\n2016-09-01\t4\n2016-09-02\t8\n2016-09-03\t10\n2016-09-04\t6\n2016-09-05\t12\n2016-09-06\t11\n2016-09-07\t11\n2016-09-08\t6\n2016-09-09\t9\n2016-09-10\t9\n2016-09-11\t10\n2016-09-12\t7\n2016-09-13\t12\n2016-09-14\t10\n2016-09-15\t6\n2016-09-16\t8\n2016-09-17\t8\n2016-09-18\t12\n2016-09-19\t5\n2016-09-20\t5\n2016-09-21\t3\n2016-09-22\t9\n2016-09-23\t7\n2016-09-24\t9\n2016-09-25\t11\n2016-09-26\t6\n2016-09-27\t9\n2016-09-28\t8\n2016-09-29\t8\n2016-09-30\t5\n2016-10-01\t8\n2016-10-02\t6\n2016-10-03\t9\n2016-10-04\t4\n2016-10-05\t4\n2016-10-06\t8\n2016-10-07\t7\n2016-10-08\t9\n2016-10-09\t6\n2016-10-10\t5\n2016-10-11\t4\n2016-10-12\t10\n2016-10-13\t6\n2016-10-14\t7\n2016-10-15\t8\n2016-10-16\t6\n2016-10-17\t7\n2016-10-18\t7\n2016-10-19\t8\n2016-10-20\t8\n2016-10-21\t4\n2016-10-22\t3\n2016-10-23\t6\n2016-10-24\t10\n2016-10-25\t9\n2016-10-26\t5\n2016-10-27\t4\n2016-10-28\t6\n2016-10-29\t10\n2016-10-30\t4\n2016-10-31\t5\n2016-11-01\t10\n2016-11-02\t4\n2016-11-03\t8\n2016-11-04\t4\n2016-11-05\t12\n2016-11-06\t7\n2016-11-07\t2\n2016-11-08\t7\n2016-11-09\t2\n2016-11-10\t8\n2016-11-11\t4\n2016-11-12\t5\n2016-11-13\t4\n2016-11-14\t3\n2016-11-15\t7\n2016-11-16\t11\n2016-11-17\t5\n2016-11-18\t8\n2016-11-19\t6\n2016-11-20\t5\n2016-11-21\t6\n2016-11-22\t7\n2016-11-23\t3\n2016-11-24\t8\n2016-11-25\t8\n2016-11-26\t8\n2016-11-27\t11\n2016-11-28\t9\n2016-11-29\t6\n2016-11-30\t6\n2016-12-01\t5\n2016-12-02\t6\n2016-12-03\t10\n2016-12-04\t3\n2016-12-05\t5\n2016-12-06\t9\n2016-12-07\t3\n2016-12-08\t4\n2016-12-09\t5\n2016-12-10\t7\n2016-12-11\t3\n2016-12-12\t5\n2016-12-13\t4\n2016-12-14\t5\n2016-12-15\t4\n2016-12-16\t3\n2016-12-17\t5\n2016-12-18\t6\n2016-12-19\t5\n2016-12-20\t5\n2016-12-21\t8\n2016-12-22\t9\n2016-12-23\t11\n2016-12-24\t8\n2016-12-25\t13\n2016-12-26\t7\n2016-12-27\t7\n2016-12-28\t6\n2016-12-29\t6\n2016-12-30\t7\n2016-12-31\t7\n2017-01-01\t10\n2017-01-02\t7\n2017-01-03\t3\n2017-01-04\t7\n2017-01-05\t2\n2017-01-06\t5\n2017-01-07\t2\n2017-01-08\t3\n2017-01-09\t4\n2017-01-10\t7\n2017-01-11\t5\n2017-01-12\t9\n2017-01-13\t5\n2017-01-14\t7\n2017-01-15\t11\n2017-01-16\t10\n2017-01-17\t4\n2017-01-18\t7\n2017-01-19\t6\n2017-01-20\t4\n2017-01-21\t7\n2017-01-22\t3\n2017-01-23\t6\n2017-01-24\t4\n2017-01-25\t14\n2017-01-26\t2\n2017-01-27\t3\n2017-01-28\t9\n2017-01-29\t1\n2017-01-30\t6\n2017-01-31\t10\n2017-02-01\t8\n2017-02-02\t5\n2017-02-03\t4\n2017-02-04\t8\n2017-02-05\t7\n2017-02-06\t11\n2017-02-07\t10\n2017-02-08\t10\n2017-02-09\t6\n2017-02-10\t5\n2017-02-11\t6\n2017-02-12\t7\n2017-02-13\t5\n2017-02-14\t5\n2017-02-15\t4\n2017-02-16\t5\n2017-02-17\t9\n2017-02-18\t9\n2017-02-19\t5\n2017-02-20\t11\n2017-02-21\t6\n2017-02-22\t2\n2017-02-23\t9\n2017-02-24\t8\n2017-02-25\t15\n2017-02-26\t4\n2017-02-27\t7\n2017-02-28\t8\n2017-03-01\t6\n2017-03-02\t4\n2017-03-03\t7\n2017-03-04\t7\n2017-03-05\t8\n2017-03-06\t7\n2017-03-07\t3\n2017-03-08\t4\n2017-03-09\t10\n2017-03-10\t6\n2017-03-11\t6\n2017-03-12\t12\n2017-03-13\t7\n2017-03-14\t2\n2017-03-15\t2\n2017-03-16\t8\n2017-03-17\t8\n2017-03-18\t11\n2017-03-19\t14\n2017-03-20\t12\n2017-03-21\t10\n2017-03-22\t10\n2017-03-23\t8\n2017-03-24\t9\n2017-03-25\t7\n2017-03-26\t5\n2017-03-27\t7\n2017-03-28\t2\n2017-03-29\t2\n2017-03-30\t12\n2017-03-31\t8\n2017-04-01\t4\n2017-04-02\t7\n2017-04-03\t6\n2017-04-04\t5\n2017-04-05\t6\n2017-04-06\t6\n2017-04-07\t5\n2017-04-08\t6\n2017-04-09\t11\n2017-04-10\t10\n2017-04-11\t8\n2017-04-12\t7\n2017-04-13\t8\n2017-04-14\t8\n2017-04-15\t11\n2017-04-16\t11\n2017-04-17\t12\n2017-04-18\t6\n2017-04-19\t5\n2017-04-20\t16\n2017-04-21\t9\n2017-04-22\t6\n2017-04-23\t9\n2017-04-24\t7\n2017-04-25\t5\n2017-04-26\t4\n2017-04-27\t3\n2017-04-28\t6\n2017-04-29\t15\n2017-04-30\t10\n2017-05-01\t5\n2017-05-02\t8\n2017-05-03\t9\n2017-05-04\t4\n2017-05-05\t5\n2017-05-06\t13\n2017-05-07\t3\n2017-05-08\t12\n2017-05-09\t6\n2017-05-10\t8\n2017-05-11\t11\n2017-05-12\t10\n2017-05-13\t8\n2017-05-14\t3\n2017-05-15\t10\n2017-05-16\t6\n2017-05-17\t8\n2017-05-18\t10\n2017-05-19\t9\n2017-05-20\t14\n2017-05-21\t10\n2017-05-22\t9\n2017-05-23\t10\n2017-05-24\t17\n2017-05-25\t8\n2017-05-26\t4\n2017-05-27\t13\n2017-05-28\t13\n2017-05-29\t5\n2017-05-30\t6\n2017-05-31\t10\n2017-06-01\t9\n2017-06-02\t12\n2017-06-03\t17\n2017-06-04\t11\n2017-06-05\t9\n2017-06-06\t10\n2017-06-07\t9\n2017-06-08\t13\n2017-06-09\t11\n2017-06-10\t6\n2017-06-11\t15\n2017-06-12\t11\n2017-06-13\t10\n2017-06-14\t15\n2017-06-15\t9\n2017-06-16\t16\n2017-06-17\t7\n2017-06-18\t14\n2017-06-19\t7\n2017-06-20\t11\n2017-06-21\t10\n2017-06-22\t13\n2017-06-23\t7\n2017-06-24\t12\n2017-06-25\t13\n2017-06-26\t18\n2017-06-27\t9\n2017-06-28\t14\n2017-06-29\t16\n2017-06-30\t3\n2017-07-01\t14\n2017-07-02\t10\n2017-07-03\t13\n2017-07-04\t9\n2017-07-05\t9\n2017-07-06\t9\n2017-07-07\t13\n2017-07-08\t11\n2017-07-09\t13\n2017-07-10\t10\n2017-07-11\t15\n2017-07-12\t12\n2017-07-13\t8\n2017-07-14\t8\n2017-07-15\t13\n2017-07-16\t11\n2017-07-17\t12\n2017-07-18\t9\n2017-07-19\t10\n2017-07-20\t10\n2017-07-21\t18\n2017-07-22\t16\n2017-07-23\t9\n2017-07-24\t11\n2017-07-25\t10\n2017-07-26\t10\n2017-07-27\t11\n2017-07-28\t11\n2017-07-29\t9\n2017-07-30\t13\n2017-07-31\t7\n2017-08-01\t12\n2017-08-02\t14\n2017-08-03\t8\n2017-08-04\t11\n2017-08-05\t12\n2017-08-06\t9\n2017-08-07\t5\n2017-08-08\t16\n2017-08-09\t15\n2017-08-10\t9\n2017-08-11\t9\n2017-08-12\t17\n2017-08-13\t10\n2017-08-14\t9\n2017-08-15\t11\n2017-08-16\t13\n2017-08-17\t8\n2017-08-18\t5\n2017-08-19\t6\n2017-08-20\t10\n2017-08-21\t7\n2017-08-22\t8\n2017-08-23\t10\n2017-08-24\t8\n2017-08-25\t10\n2017-08-26\t7\n2017-08-27\t10\n2017-08-28\t11\n2017-08-29\t4\n2017-08-30\t14\n2017-08-31\t13\n2017-09-01\t10\n2017-09-02\t6\n2017-09-03\t10\n2017-09-04\t14\n2017-09-05\t7\n2017-09-06\t8\n2017-09-07\t6\n2017-09-08\t7\n2017-09-09\t11\n2017-09-10\t10\n2017-09-11\t10\n2017-09-12\t7\n2017-09-13\t12\n2017-09-14\t6\n2017-09-15\t7\n2017-09-16\t21\n2017-09-17\t18\n2017-09-18\t9\n2017-09-19\t9\n2017-09-20\t13\n2017-09-21\t5\n2017-09-22\t12\n2017-09-23\t8\n2017-09-24\t10\n2017-09-25\t10\n2017-09-26\t4\n2017-09-27\t10\n2017-09-28\t6\n2017-09-29\t12\n2017-09-30\t11\n2017-10-01\t6\n2017-10-02\t5\n2017-10-03\t9\n2017-10-04\t7\n2017-10-05\t11\n2017-10-06\t7\n"
+          },
+          {
+            "type": "HTML",
+            "data": "<div class=\"result-alert alert-warning\" role=\"alert\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button><strong>Output is truncated</strong> to 1000 rows. Learn more about <strong>zeppelin.spark.maxResult</strong></div>\n"
+          }
+        ]
+      }
+    },
+    {
+      "text": "%md\nLet's enrich daily bites with features derived from the `date`: `day_of_week`, `month` and `elapsed_days` since the start of the dataset",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T14:27:32+0100",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620048392394_1657080482",
+      "id": "paragraph_1620048392394_1657080482",
+      "dateCreated": "2021-05-03T14:26:32+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:23051",
+      "dateFinished": "2021-05-03T14:27:32+0100",
+      "dateStarted": "2021-05-03T14:27:32+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<p>Let&rsquo;s enrich daily bites with features derived from the <code>date</code>: <code>day_of_week</code>, <code>month</code> and <code>elapsed_days</code> since the start of the dataset</p>\n\n</div>"
+          }
+        ]
+      }
+    },
+    {
+      "text": "val date_features = spark.sql(\"SELECT date, EXTRACT(DOW FROM date) AS day_of_week, EXTRACT(MONTH FROM date) AS month, datediff(date, (SELECT MIN(date) FROM bites)) AS elapsed_days FROM bites GROUP BY date ORDER BY date ASC\")\ndate_features.createOrReplaceTempView(\"date_features\")",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-03T13:50:30+0100",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620044679942_1597391192",
+      "id": "paragraph_1620044679942_1597391192",
+      "dateCreated": "2021-05-03T13:24:39+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:21151",
+      "dateFinished": "2021-05-03T13:50:31+0100",
+      "dateStarted": "2021-05-03T13:50:30+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u001b[1m\u001b[34mdate_features\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, day_of_week: int ... 2 more fields]\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=135",
+              "$$hashKey": "object:22801"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=136",
+              "$$hashKey": "object:22802"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620044824163_2033262093",
+      "id": "paragraph_1620044824163_2033262093",
+      "dateCreated": "2021-05-03T13:27:04+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:21220",
+      "text": "date_features.show",
+      "dateUpdated": "2021-05-03T13:50:35+0100",
+      "dateFinished": "2021-05-03T13:50:37+0100",
+      "dateStarted": "2021-05-03T13:50:35+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+-----------+-----+------------+\n|      date|day_of_week|month|elapsed_days|\n+----------+-----------+-----+------------+\n|2014-04-10|          5|    4|           0|\n|2014-10-22|          4|   10|         195|\n|2014-11-08|          7|   11|         212|\n|2014-11-21|          6|   11|         225|\n|2014-12-25|          5|   12|         259|\n|2014-12-26|          6|   12|         260|\n|2015-01-08|          5|    1|         273|\n|2015-01-11|          1|    1|         276|\n|2015-01-13|          3|    1|         278|\n|2015-01-20|          3|    1|         285|\n|2015-01-21|          4|    1|         286|\n|2015-01-22|          5|    1|         287|\n|2015-01-23|          6|    1|         288|\n|2015-01-24|          7|    1|         289|\n|2015-01-25|          1|    1|         290|\n|2015-01-26|          2|    1|         291|\n|2015-01-27|          3|    1|         292|\n|2015-01-28|          4|    1|         293|\n|2015-01-29|          5|    1|         294|\n|2015-01-30|          6|    1|         295|\n+----------+-----------+-----+------------+\nonly showing top 20 rows\n\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=137",
+              "$$hashKey": "object:22936"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=139",
+              "$$hashKey": "object:22937"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=140",
+              "$$hashKey": "object:22938"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620044842609_2007998239",
+      "id": "paragraph_1620044842609_2007998239",
+      "dateCreated": "2021-05-03T13:27:22+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:21330",
+      "text": "val daily_bites_date_features = spark.sql(\"SELECT df.*, db.num_bites FROM daily_bites db JOIN date_features df ON db.date = df.date\")\ndaily_bites_date_features.show",
+      "dateUpdated": "2021-05-03T13:52:45+0100",
+      "dateFinished": "2021-05-03T13:52:48+0100",
+      "dateStarted": "2021-05-03T13:52:45+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+-----------+-----+------------+---------+\n|      date|day_of_week|month|elapsed_days|num_bites|\n+----------+-----------+-----+------------+---------+\n|2015-03-09|          2|    3|         333|        7|\n|2017-08-11|          6|    8|        1219|        9|\n|2017-09-11|          2|    9|        1250|       10|\n|2015-05-19|          3|    5|         404|       10|\n|2016-03-01|          3|    3|         691|        6|\n|2015-03-06|          6|    3|         330|        7|\n|2016-04-25|          2|    4|         746|       13|\n|2017-01-06|          6|    1|        1002|        5|\n|2015-12-22|          3|   12|         621|        5|\n|2016-05-03|          3|    5|         754|        7|\n|2016-10-03|          2|   10|         907|        9|\n|2015-04-09|          5|    4|         364|        4|\n|2016-08-15|          2|    8|         858|        8|\n|2016-08-31|          4|    8|         874|        3|\n|2015-09-02|          4|    9|         510|        4|\n|2016-07-26|          3|    7|         838|        2|\n|2017-01-27|          6|    1|        1023|        3|\n|2017-02-26|          1|    2|        1053|        4|\n|2017-09-28|          5|    9|        1267|        6|\n|2016-01-28|          5|    1|         658|        3|\n+----------+-----------+-----+------------+---------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mdaily_bites_date_features\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, day_of_week: int ... 3 more fields]\n"
+          }
+        ]
+      }
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=142",
+              "$$hashKey": "object:23120"
+            },
+            {
+              "jobUrl": "http://172.17.0.1:4040/jobs/job?id=143",
+              "$$hashKey": "object:23121"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620046365593_583044312",
+      "id": "paragraph_1620046365593_583044312",
+      "dateCreated": "2021-05-03T13:52:45+0100",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:22811",
+      "text": "daily_bites_date_features.write.parquet(\"/home/del/Working/spark_zeppelin_example/daily_bites.parquet\")",
+      "dateUpdated": "2021-05-03T14:26:21+0100",
+      "dateFinished": "2021-05-03T14:26:34+0100",
+      "dateStarted": "2021-05-03T14:26:21+0100",
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      }
+    }
+  ],
+  "name": "dog_bites",
+  "id": "2G6TWZGNZ",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/dog_bites"
+}
